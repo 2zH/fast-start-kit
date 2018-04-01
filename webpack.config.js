@@ -1,25 +1,15 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin'); //installed via npm
 
-const entry = './index.js'
-const output = {
-  path: path.resolve(__dirname, './'),
-  filename: 'bundle.js'
-}
-const devServer = {
-  contentBase: './',
-  open: true,
-  watchOptions:{
-    poll: true
-  }
-}
-const plugins = [
-  new HtmlWebpackPlugin()
-]
+const config = {
+  mode: "development",
+  module: {
+    rules: [
+      { test: /\.js$/, use: 'babel-loader' }
+    ]
+  },
+  plugins: [
+    new HtmlWebpackPlugin()
+  ]
+};
 
-module.exports = {
-  entry,
-  output,
-  devServer,
-  plugins
-}
+module.exports = config;

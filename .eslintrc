@@ -1,0 +1,20 @@
+{
+  "parser": "babel-eslint",
+  "plugins": [
+    "babel"
+  ],
+  "rules": {
+    "babel/new-cap": 1,
+    "babel/no-invalid-this": 1,
+    "babel/object-curly-spacing": 1,
+    "babel/quotes": 0,
+    "babel/semi": 0
+  },
+  "extends": [
+    "eslint:recommended"
+  ],
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}
